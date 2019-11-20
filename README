@@ -1,0 +1,28 @@
+Description:
+
+Take an LWN.net announcement of a new Linux kernel version and add links to the
+new commits from:
+
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log
+
+
+
+Python module dependencies:
+
+git
+lxml
+urllib
+
+Other dependencies:
+A local git repo with the mainline linux source code.
+
+Example:
+
+$ ./link-commits.py https://lwn.net/Articles/805037/
+page: https://lwn.net/Articles/805037/
+read tags.cache
+get commits v5.4-rc7..v5.4-rc8
+link commits ...
+generate testpage.html
+
+Use ./compare.sh to see the differences!
